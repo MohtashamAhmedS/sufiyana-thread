@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.section {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.bg {
+  /* object-fit: cover; */
+  object-position: center;
+  z-index: 0;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  /* background: rgba(0, 0, 0, 0.35); */
+  z-index: 1;
+}
+
+/* ── Container ── */
+.container {
+  z-index: 2;
+  justify-content: space-between;
+  gap: 2rem;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 6rem;
+  display: flex;
+  position: relative;
+}
+/* ── Left content ── */
+.content {
+  flex-direction: column;
+  flex: 1;
+  max-width: 700px;
+  display: flex;
+  top: 15px;
+  position: relative;
+}
+
+.heading {
+  color: #000;
+  font-family: Parisienne, cursive;
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  font-weight: 500;
+  line-height: 1.15;
+  margin: 0;
+  /* letter-spacing: -0.01em; */
+}
+
+.tagline {
+  font-size: clamp(0.95rem, 1.5vw, 1.125rem);
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.85);
+  line-height: 1.6;
+}
+
+/* ── Buttons ── */
+.buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+}
+
+.btnPrimary {
+  padding: 0.75rem 2rem;
+  font-size: 0.9rem;
+  /* font-weight: 600; */
+  font-family: var(--font-poppins), sans-serif;
+  background-color: #000;
+  color: #997c3c;
+  border: 1.5px solid #997c3c;
+  border-radius: 4px;
+  cursor: pointer;
+  letter-spacing: 0.04em;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.btnPrimary:hover {
+  background-color: #997c3c;
+  color: #000;
+}
+
+.btnSecondary {
+  padding: 0.75rem 2rem;
+  font-size: 0.9rem;
+  /* font-weight: 600; */
+  font-family: var(--font-poppins), sans-serif;
+  background-color: transparent;
+  color: #000;
+  border: 1.5px solid #997c3c;
+  border-radius: 4px;
+  cursor: pointer;
+  letter-spacing: 0.04em;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.btnSecondary:hover {
+  background-color: #997c3c;
+  color: #fff;
+}
+
+/* ── Right — model ── */
+.modelWrap {
+  flex: 0 0 726px;
+  height: 715px;
+  position: relative;
+  top: 14px;
+}
+.model {
+  object-fit: contain;
+  object-position: bottom;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .section {
+    align-items: flex-end;
+    padding-bottom: 3rem;
+  }
+
+  .container {
+    flex-direction: column;
+    align-items: center;
+    padding: 0 1.25rem;
+    gap: 1.5rem;
+  }
+
+  .content {
+    align-items: center;
+    text-align: center;
+    max-width: 100%;
+  }
+
+  .tagline {
+    max-width: 100%;
+  }
+
+  .buttons {
+    justify-content: center;
+  }
+
+  .modelWrap {
+    flex: none;
+    width: 400px;
+    height: 425px;
+    top: 39px;
+  }
+}
