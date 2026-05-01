@@ -111,7 +111,7 @@
 @media (max-width: 480px) {
   .section {
     padding: 0rem 0rem;
-    margin: 0px 15px;
+    margin: 0px 0px;
   }
 
   .grid {
